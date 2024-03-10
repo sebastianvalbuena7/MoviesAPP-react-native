@@ -1,0 +1,12 @@
+import { Text, View } from "react-native"
+import { useMovies } from "../../hooks/useMovies"
+
+export const HomeScreen = () => {
+    const { isLoading, nowPlaying } = useMovies();
+
+    return (
+        <View>
+            <Text>HomeScreen</Text>
+        </View>
+    )
+}
