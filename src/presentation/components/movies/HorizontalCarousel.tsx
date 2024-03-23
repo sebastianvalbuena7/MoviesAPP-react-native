@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const HorizontalCarousel = ({ movies, title, loadNextPage }: Props) => {
-    const isLoading = useRef(false);
+    const isLoading = useRef<boolean>(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -23,7 +23,7 @@ export const HorizontalCarousel = ({ movies, title, loadNextPage }: Props) => {
 
         const { contentSize, contentOffset, layoutMeasurement } = event.nativeEvent;
 
-        const isEndReached = (contentOffset.x + layoutMeasurement.width + 600) >= contentSize.width;
+        const isEndReached: boolean = (contentOffset.x + layoutMeasurement.width + 600) >= contentSize.width;
 
         if (!isEndReached) return;
 
